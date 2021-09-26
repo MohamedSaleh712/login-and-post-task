@@ -1,0 +1,25 @@
+<h2>Login Form</h2>
+<div>
+    <form>
+
+        <div class="imgcontainer">
+            <img ng-src="../assets/img/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label data-title="uname"><b>Username</b></label>
+            <input type="text" ng-model="user.email" placeholder="Enter Username" name="uname">
+            <div ng-if="error.path == 'email'">{{error.msg}}</div>
+
+            <label data-title="psw"><b>Password</b></label>
+            <input type="password" ng-model="user.password" placeholder="Enter Password" name="psw">
+            <div ng-if="error.path == 'password'">{{error.msg}}</div>
+            
+            <div ng-if="showlLoginError">{{loginError}}</div>
+            
+            <button style="float:left;width: 100%; margin-top: 30px;" type="submit" ng-click="logIn()">Login</button>
+        </div>
+
+
+    </form>
+</div>

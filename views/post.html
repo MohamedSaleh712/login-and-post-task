@@ -1,0 +1,16 @@
+<div style="margin-bottom: 60px;">
+    <h2>post page</h2>
+    <h3>Hi {{username}} </h3>
+    <form>
+        <textarea name="post" rows="5" cols="66" ng-model="newPost" rows="20"></textarea><br>
+        <strong ng-if="boolPost">{{postError}}</strong><br>
+        <button ng-click="addPost(newPost)">new post</button>
+    </form>
+</div>
+
+<div ng-repeat="post in posts">
+    <h3 class="posts">
+        <span class="deletePost" ng-click="deletePost(post)">X</span>
+        {{post}}
+    </h3>
+</div>
