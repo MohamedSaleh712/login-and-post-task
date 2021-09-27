@@ -15,12 +15,6 @@ angular.module('login', ['ngRoute'])
             controller: 'postCtrl',
         });
     }])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/register', {
-            templateUrl: '../views/register.html',
-            controller: 'registerCtrl',
-        });
-    }])
 
     .service('loginService', ['$http', function ($http) {
         let vm = this;
