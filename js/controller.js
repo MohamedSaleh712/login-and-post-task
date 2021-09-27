@@ -7,14 +7,17 @@ angular.module('login', ['ngRoute'])
         $routeProvider.when('/login', {
             templateUrl: '../views/login.html',
             controller: 'loginCtrl',
-        });
-    }])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/post', {
+        }).when('/post', {
             templateUrl: '../views/post.html',
             controller: 'postCtrl',
         });
     }])
+    // .config(['$routeProvider', function ($routeProvider) {
+    //     $routeProvider.when('/post', {
+    //         templateUrl: '../views/post.html',
+    //         controller: 'postCtrl',
+    //     });
+    // }])
 
     .service('loginService', ['$http', function ($http) {
         let vm = this;
